@@ -39,7 +39,7 @@
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceCardCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceManufacturer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceCardStock = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -111,7 +111,7 @@
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceCardCustomer,
-            this.accordionControlElement7,
+            this.aceManufacturer,
             this.aceCardStock});
             this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Name = "accordionControlElement5";
@@ -123,10 +123,11 @@
             this.aceCardCustomer.Text = "Müşteri Kartı";
             this.aceCardCustomer.Click += new System.EventHandler(this.aceCardCustomer_Click);
             // 
-            // accordionControlElement7
+            // aceManufacturer
             // 
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Text = "Üretici Firma Kartı";
+            this.aceManufacturer.Name = "aceManufacturer";
+            this.aceManufacturer.Text = "Üretici Firma Kartı";
+            this.aceManufacturer.Click += new System.EventHandler(this.aceManufacturer_Click);
             // 
             // aceCardStock
             // 
@@ -188,7 +189,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceCardCustomer;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceManufacturer;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceCardStock;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;

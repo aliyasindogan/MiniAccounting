@@ -40,5 +40,14 @@ namespace MiniAccounting.Forms
             //3/5 ) Event nerede kullanılacaksa oraya ekleniyor.
             SelectedPageName("Müşteri Kartları");
         }
+
+        private void aceManufacturer_Click(object sender, EventArgs e)
+        {
+            fdfContainer.Controls.Clear();
+            fdfContainer.Controls.Add(new xucNavigation() { Dock = DockStyle.Top });
+            fdfContainer.Controls.Add(new xucCardManufacturer() { Dock = DockStyle.Bottom });
+            //3/5 ) Event nerede kullanılacaksa oraya ekleniyor.
+            SelectedPageName("Üretici Firma Kartları");
+        }
     }
 }
