@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MiniAccounting.Models.BaseEntities.Concrete;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Concrete
 {
-    [Table("CardCustomer")]
-    public class CardCustomer
+    /// <summary>
+    /// Müşteri
+    /// </summary>
+    [Table("Customer")]
+    public class Customer : AuditEntity
     {
-        public int Id { get; set; }
-
         [StringLength(50)]
         public string FirstName { get; set; }
 

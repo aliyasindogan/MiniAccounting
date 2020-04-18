@@ -1,16 +1,14 @@
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Concrete
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    using MiniAccounting.Models.BaseEntities.Concrete;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
+    /// <summary>
+    /// Kullanýcý Rol
+    /// </summary>
     [Table("UserRole")]
-    public partial class UserRole
+    public partial class UserRole : AuditEntity
     {
-        public int Id { get; set; }
-
         public int UserTypeID { get; set; }
 
         public int CategoryID { get; set; }

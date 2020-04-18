@@ -1,13 +1,15 @@
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Concrete
 {
+    using MiniAccounting.Models.BaseEntities.Abstract;
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
+    /// <summary>
+    /// Kullanýcý
+    /// </summary>
     [Table("User")]
-    public partial class User
+    public partial class User : IModifiableEntity, IDisplay
     {
         public int Id { get; set; }
 
@@ -31,6 +33,12 @@ namespace MiniAccounting.Models
 
         public int UserTypeID { get; set; }
 
+        public int? CreatedUserID { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public int? ModifiedUserID { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        public bool IsDisplay { get; set; }
+        public int DisplayOrder { get; set; }
         public virtual UserType UserType { get; set; }
     }
 }

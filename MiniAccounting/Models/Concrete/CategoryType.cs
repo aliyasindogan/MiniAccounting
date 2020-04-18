@@ -1,15 +1,16 @@
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Concrete
 {
-    using System;
+    using MiniAccounting.Models.BaseEntities.Abstract;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
+    /// <summary>
+    /// Kategori Tipi
+    /// </summary>
     [Table("CategoryType")]
-    public partial class CategoryType
+    public partial class CategoryType : IBaseEntity
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CategoryType()
         {
             Category = new HashSet<Category>();
@@ -21,7 +22,6 @@ namespace MiniAccounting.Models
         [StringLength(50)]
         public string CategoryTypeName { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Category> Category { get; set; }
     }
 }

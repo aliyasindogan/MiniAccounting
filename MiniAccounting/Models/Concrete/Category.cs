@@ -1,21 +1,20 @@
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Concrete
 {
-    using System;
+    using MiniAccounting.Models.BaseEntities.Concrete;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
+    /// <summary>
+    /// Kategori
+    /// </summary>
     [Table("Category")]
-    public partial class Category
+    public partial class Category : AuditEntity
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
             UserRole = new HashSet<UserRole>();
         }
-
-        public int Id { get; set; }
 
         [Required]
         [StringLength(100)]

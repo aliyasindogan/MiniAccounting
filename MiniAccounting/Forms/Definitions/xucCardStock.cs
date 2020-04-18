@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using MiniAccounting.Models;
+﻿using DevExpress.XtraEditors;
+using MiniAccounting.Models.Concrete;
+using MiniAccounting.Models.Context;
 using MiniAccounting.Models.ModelViews;
+using System;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace MiniAccounting.Forms.Operations
 {
@@ -41,7 +37,7 @@ namespace MiniAccounting.Forms.Operations
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            CardStock cardStock = new CardStock
+            Stock cardStock = new Stock
             {
                 MeasurementUnitID = db.MeasurementUnit.FirstOrDefault(x => x.MeasurementUnitName == cmbMeasurementUnit.SelectedText).Id,
                 TaxRateID = db.TaxRate.FirstOrDefault(x => x.TaxName == cmbTaxRate.SelectedText).Id,

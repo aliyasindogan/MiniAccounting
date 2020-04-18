@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace MiniAccounting.Forms.Operations
 {
-    public partial class xucCardCustomer : XtraUserControl
+    public partial class xucCardManufacturer : XtraUserControl
     {
         private MiniAccountingContext db = new MiniAccountingContext();
 
-        public xucCardCustomer()
+        public xucCardManufacturer()
         {
             InitializeComponent();
         }

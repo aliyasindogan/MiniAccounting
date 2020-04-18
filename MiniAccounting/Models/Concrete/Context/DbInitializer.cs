@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MiniAccounting.Models.Concrete;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Context
 {
     public class DbInitializer : CreateDatabaseIfNotExists<MiniAccountingContext>
     {

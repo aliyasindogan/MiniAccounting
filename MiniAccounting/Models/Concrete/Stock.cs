@@ -1,16 +1,15 @@
-namespace MiniAccounting.Models
+namespace MiniAccounting.Models.Concrete
 {
-    using System;
-    using System.Collections.Generic;
+    using MiniAccounting.Models.BaseEntities.Concrete;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    [Table("CardStock")]
-    public partial class CardStock
+    /// <summary>
+    /// Stok
+    /// </summary>
+    [Table("Stock")]
+    public partial class Stock : AuditEntity
     {
-        public int Id { get; set; }
-
         [Required]
         [StringLength(50)]
         public string StockCode { get; set; }
