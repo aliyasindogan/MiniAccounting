@@ -1,7 +1,8 @@
 # Mini Accounting
 C# WinForm Mini Muhasebe Programı 
-Entity Framework 4.7.2
 
-Ms Sql
+*Entity Framework 4.7.2
 
-Code First
+*Ms Sql
+
+*Code First
