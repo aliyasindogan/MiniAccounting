@@ -38,5 +38,14 @@ namespace MiniAccounting.Forms
             //3/5 ) Event nerede kullanılacaksa oraya ekleniyor.
             SelectedPageName("Stok Kartları");
         }
+
+        private void aceCardCustomer_Click(object sender, EventArgs e)
+        {
+            fdfContainer.Controls.Clear();
+            fdfContainer.Controls.Add(new xucNavigation() { Dock = DockStyle.Top });
+            fdfContainer.Controls.Add(new xucCardCustomer() { Dock = DockStyle.Bottom });
+            //3/5 ) Event nerede kullanılacaksa oraya ekleniyor.
+            SelectedPageName("Müşteri Kartları");
+        }
     }
 }

@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Definitions\xucCardCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\xucCardCustomer.Designer.cs">
+      <DependentUpon>xucCardCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\xucCardStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,17 +93,24 @@
     <Compile Include="Forms\xucDashboard.Designer.cs">
       <DependentUpon>xucDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004181431370_initial.cs" />
-    <Compile Include="Migrations\202004181431370_initial.Designer.cs">
-      <DependentUpon>202004181431370_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202004181553052_newDB.cs" />
+    <Compile Include="Migrations\202004181553052_newDB.Designer.cs">
+      <DependentUpon>202004181553052_newDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004181554577_updateTable.cs" />
+    <Compile Include="Migrations\202004181554577_updateTable.Designer.cs">
+      <DependentUpon>202004181554577_updateTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CardCustomer.cs" />
     <Compile Include="Models\CardStock.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryType.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\DbInitializer.cs" />
     <Compile Include="Models\MeasurementUnit.cs" />
     <Compile Include="Models\MiniAccountingContext.cs" />
+    <Compile Include="Models\ModelViews\CardCustomerView.cs" />
     <Compile Include="Models\ModelViews\CardStockView.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\TaxRate.cs" />
@@ -112,6 +125,9 @@
     <Compile Include="Forms\xucNavigation.Designer.cs">
       <DependentUpon>xucNavigation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Definitions\xucCardCustomer.resx">
+      <DependentUpon>xucCardCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\xucCardStock.resx">
       <DependentUpon>xucCardStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,8 +140,11 @@
     <EmbeddedResource Include="Forms\xucDashboard.resx">
       <DependentUpon>xucDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004181431370_initial.resx">
-      <DependentUpon>202004181431370_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004181553052_newDB.resx">
+      <DependentUpon>202004181553052_newDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004181554577_updateTable.resx">
+      <DependentUpon>202004181554577_updateTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

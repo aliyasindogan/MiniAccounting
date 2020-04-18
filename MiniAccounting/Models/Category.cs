@@ -21,7 +21,7 @@ namespace MiniAccounting.Models
         [StringLength(100)]
         public string CategoryName { get; set; }
 
-        public int? SubCategoryID { get; set; }
+        public int SubCategoryID { get; set; }
 
         public int CategoryTypeID { get; set; }
 

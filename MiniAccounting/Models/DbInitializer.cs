@@ -67,6 +67,12 @@ namespace MiniAccounting.Models
                 context.User.Add(user1);
                 context.SaveChanges();
             }
+            if (!context.City.Any())
+            {
+                City city = new City { CityName = "İstanbul" };
+                context.City.Add(city);
+                context.SaveChanges();
+            }
             base.Seed(context);
         }
     }

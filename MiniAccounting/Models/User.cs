@@ -24,9 +24,12 @@ namespace MiniAccounting.Models
         public string Email { get; set; }
 
         [StringLength(50)]
+        public string Phone { get; set; }
+
+        [StringLength(50)]
         public string Password { get; set; }
 
-        public int? UserTypeID { get; set; }
+        public int UserTypeID { get; set; }
 
         public virtual UserType UserType { get; set; }
     }

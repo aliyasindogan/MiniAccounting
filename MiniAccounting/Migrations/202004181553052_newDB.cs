@@ -3,10 +3,35 @@ namespace MiniAccounting.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class newDB : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.CardCustomer",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(maxLength: 50),
+                        LastName = c.String(maxLength: 50),
+                        Phone = c.String(maxLength: 50),
+                        Description = c.String(),
+                        CityID = c.Int(),
+                        Address = c.String(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Cities", t => t.CityID)
+                .Index(t => t.CityID);
+            
+            CreateTable(
+                "dbo.Cities",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        CityName = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.CardStock",
                 c => new
@@ -18,8 +43,8 @@ namespace MiniAccounting.Migrations
                         MeasurementUnitID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.MeasurementUnit", t => t.MeasurementUnitID)
-                .ForeignKey("dbo.TaxRate", t => t.TaxRateID)
+                .ForeignKey("dbo.MeasurementUnit", t => t.MeasurementUnitID, cascadeDelete: true)
+                .ForeignKey("dbo.TaxRate", t => t.TaxRateID, cascadeDelete: true)
                 .Index(t => t.TaxRateID)
                 .Index(t => t.MeasurementUnitID);
             
@@ -48,11 +73,11 @@ namespace MiniAccounting.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CategoryName = c.String(nullable: false, maxLength: 100),
-                        SubCategoryID = c.Int(),
+                        SubCategoryID = c.Int(nullable: false),
                         CategoryTypeID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.CategoryType", t => t.CategoryTypeID)
+                .ForeignKey("dbo.CategoryType", t => t.CategoryTypeID, cascadeDelete: true)
                 .Index(t => t.CategoryTypeID);
             
             CreateTable(
@@ -73,8 +98,8 @@ namespace MiniAccounting.Migrations
                         CategoryID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.UserType", t => t.UserTypeID)
-                .ForeignKey("dbo.Category", t => t.CategoryID)
+                .ForeignKey("dbo.Category", t => t.CategoryID, cascadeDelete: true)
+                .ForeignKey("dbo.UserType", t => t.UserTypeID, cascadeDelete: true)
                 .Index(t => t.UserTypeID)
                 .Index(t => t.CategoryID);
             
@@ -96,11 +121,12 @@ namespace MiniAccounting.Migrations
                         FirstName = c.String(maxLength: 50),
                         LastName = c.String(maxLength: 50),
                         Email = c.String(maxLength: 50),
+                        Phone = c.String(maxLength: 50),
                         Password = c.String(maxLength: 50),
-                        UserTypeID = c.Int(),
+                        UserTypeID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.UserType", t => t.UserTypeID)
+                .ForeignKey("dbo.UserType", t => t.UserTypeID, cascadeDelete: true)
                 .Index(t => t.UserTypeID);
             
             CreateTable(
@@ -119,18 +145,20 @@ namespace MiniAccounting.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.UserRole", "CategoryID", "dbo.Category");
             DropForeignKey("dbo.UserRole", "UserTypeID", "dbo.UserType");
             DropForeignKey("dbo.User", "UserTypeID", "dbo.UserType");
+            DropForeignKey("dbo.UserRole", "CategoryID", "dbo.Category");
             DropForeignKey("dbo.Category", "CategoryTypeID", "dbo.CategoryType");
             DropForeignKey("dbo.CardStock", "TaxRateID", "dbo.TaxRate");
             DropForeignKey("dbo.CardStock", "MeasurementUnitID", "dbo.MeasurementUnit");
+            DropForeignKey("dbo.CardCustomer", "CityID", "dbo.Cities");
             DropIndex("dbo.User", new[] { "UserTypeID" });
             DropIndex("dbo.UserRole", new[] { "CategoryID" });
             DropIndex("dbo.UserRole", new[] { "UserTypeID" });
             DropIndex("dbo.Category", new[] { "CategoryTypeID" });
             DropIndex("dbo.CardStock", new[] { "MeasurementUnitID" });
             DropIndex("dbo.CardStock", new[] { "TaxRateID" });
+            DropIndex("dbo.CardCustomer", new[] { "CityID" });
             DropTable("dbo.sysdiagrams");
             DropTable("dbo.User");
             DropTable("dbo.UserType");
@@ -140,6 +168,8 @@ namespace MiniAccounting.Migrations
             DropTable("dbo.TaxRate");
             DropTable("dbo.MeasurementUnit");
             DropTable("dbo.CardStock");
+            DropTable("dbo.Cities");
+            DropTable("dbo.CardCustomer");
         }
     }
 }

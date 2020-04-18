@@ -22,33 +22,11 @@ namespace MiniAccounting.Models
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<UserType> UserType { get; set; }
+        public virtual DbSet<CardCustomer> CardCustomer { get; set; }
+        public virtual DbSet<City> City { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>()
-                .HasMany(e => e.UserRole)
-                .WithRequired(e => e.Category)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<CategoryType>()
-                .HasMany(e => e.Category)
-                .WithRequired(e => e.CategoryType)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<MeasurementUnit>()
-                .HasMany(e => e.CardStock)
-                .WithRequired(e => e.MeasurementUnit)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<TaxRate>()
-                .HasMany(e => e.CardStock)
-                .WithRequired(e => e.TaxRate)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<UserType>()
-                .HasMany(e => e.UserRole)
-                .WithRequired(e => e.UserType)
-                .WillCascadeOnDelete(false);
         }
     }
 }
