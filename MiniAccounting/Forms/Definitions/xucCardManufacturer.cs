@@ -18,9 +18,9 @@ namespace MiniAccounting.Forms.Operations
             InitializeComponent();
         }
 
-        private void xucCardStock_Load(object sender, EventArgs e)
+        private void xucCardManufacturer_Load(object sender, EventArgs e)
         {
-            CardCustomerGridControlFill();
+            CardManufacturerGridControlFill();
 
             var cityList = db.City;
             foreach (var item in cityList)
@@ -29,34 +29,38 @@ namespace MiniAccounting.Forms.Operations
             }
         }
 
-        private void CardCustomerGridControlFill()
+        private void CardManufacturerGridControlFill()
         {
-            var cardStockList = from cc in db.CardCustomer
-                                select new CardCustomerView()
-                                {
-                                    Address = cc.Address,
-                                    CityName = db.City.FirstOrDefault(x => x.Id == cc.Id).CityName,
-                                    Description = cc.Description,
-                                    FirstName = cc.FirstName,
-                                    LastName = cc.LastName,
-                                    Phone = cc.Phone
-                                };
+            var cardManufacturerList = from m in db.Manufacturer
+                                       select new CardManufacturerView()
+                                       {
+                                           Title = m.Title,
+                                           Address = m.Address,
+                                           CityName = db.City.FirstOrDefault(x => x.Id == m.CityID).CityName,
+                                           Description = m.Description,
+                                           FirstName = m.AuthorizedFirstName,
+                                           LastName = m.AuthorizedLastName,
+                                           Phone = m.Phone
+                                       };
 
-            gridControl1.DataSource = cardStockList.ToList();
+            gridControl1.DataSource = cardManufacturerList.ToList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Customer cardCustomer = new Customer
+            Manufacturer cardManufacturer = new Manufacturer
             {
                 Address = txtAddress.Text,
                 Phone = txtPhone.Text,
-                LastName = txtLastName.Text,
-                FirstName = txtFirstName.Text,
+                AuthorizedLastName = txtLastName.Text,
+                AuthorizedFirstName = txtFirstName.Text,
                 Description = txtDescreption.Text,
+                Title = txtTitle.Text,
                 CityID = db.City.FirstOrDefault(x => x.CityName == cmbCity.SelectedText).Id,
+                CreatedDate = DateTime.Now,
+                CreatedUserID = 1
             };
-            db.CardCustomer.Add(cardCustomer);
+            db.Manufacturer.Add(cardManufacturer);
             db.SaveChanges();
             XtraMessageBox.Show("Kayıt Başarılı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtAddress.Text = "";
@@ -65,7 +69,8 @@ namespace MiniAccounting.Forms.Operations
             txtFirstName.Text = "";
             txtDescreption.Text = "";
             cmbCity.SelectedIndex = 0;
-            CardCustomerGridControlFill();
+            txtTitle.Text = "";
+            CardManufacturerGridControlFill();
         }
     }
 }

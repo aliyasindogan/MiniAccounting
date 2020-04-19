@@ -18,7 +18,7 @@ namespace MiniAccounting.Forms.Operations
             InitializeComponent();
         }
 
-        private void xucCardStock_Load(object sender, EventArgs e)
+        private void xucCardCustomer_Load(object sender, EventArgs e)
         {
             CardCustomerGridControlFill();
 
@@ -31,18 +31,18 @@ namespace MiniAccounting.Forms.Operations
 
         private void CardCustomerGridControlFill()
         {
-            var cardStockList = from cc in db.CardCustomer
-                                select new CardCustomerView()
-                                {
-                                    Address = cc.Address,
-                                    CityName = db.City.FirstOrDefault(x => x.Id == cc.Id).CityName,
-                                    Description = cc.Description,
-                                    FirstName = cc.FirstName,
-                                    LastName = cc.LastName,
-                                    Phone = cc.Phone
-                                };
+            var cardCustomerList = from cc in db.Customer
+                                   select new CardCustomerView()
+                                   {
+                                       Address = cc.Address,
+                                       CityName = db.City.FirstOrDefault(x => x.Id == cc.CityID).CityName,
+                                       Description = cc.Description,
+                                       FirstName = cc.FirstName,
+                                       LastName = cc.LastName,
+                                       Phone = cc.Phone
+                                   };
 
-            gridControl1.DataSource = cardStockList.ToList();
+            gridControl1.DataSource = cardCustomerList.ToList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -55,8 +55,10 @@ namespace MiniAccounting.Forms.Operations
                 FirstName = txtFirstName.Text,
                 Description = txtDescreption.Text,
                 CityID = db.City.FirstOrDefault(x => x.CityName == cmbCity.SelectedText).Id,
+                CreatedDate = DateTime.Now,
+                CreatedUserID = 1
             };
-            db.CardCustomer.Add(cardCustomer);
+            db.Customer.Add(cardCustomer);
             db.SaveChanges();
             XtraMessageBox.Show("Kayıt Başarılı", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtAddress.Text = "";

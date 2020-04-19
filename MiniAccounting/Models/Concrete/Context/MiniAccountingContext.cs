@@ -19,7 +19,7 @@ namespace MiniAccounting.Models.Context
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<UserType> UserType { get; set; }
-        public virtual DbSet<Customer> CardCustomer { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Manufacturer> Manufacturer { get; set; }
 

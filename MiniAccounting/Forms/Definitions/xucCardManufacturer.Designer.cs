@@ -36,7 +36,9 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtDescreption = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -45,8 +47,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCity.Properties)).BeginInit();
@@ -67,7 +67,7 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.textBox1);
+            this.groupControl1.Controls.Add(this.txtTitle);
             this.groupControl1.Controls.Add(this.txtFirstName);
             this.groupControl1.Controls.Add(this.txtDescreption);
             this.groupControl1.Controls.Add(this.txtPhone);
@@ -81,7 +81,7 @@
             // 
             // cmbCity
             // 
-            this.cmbCity.Location = new System.Drawing.Point(8, 106);
+            this.cmbCity.Location = new System.Drawing.Point(682, 56);
             this.cmbCity.Name = "cmbCity";
             this.cmbCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -90,7 +90,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(8, 89);
+            this.labelControl4.Location = new System.Drawing.Point(682, 39);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(24, 13);
             this.labelControl4.TabIndex = 2;
@@ -107,7 +107,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(581, 41);
+            this.labelControl5.Location = new System.Drawing.Point(388, 89);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(41, 13);
             this.labelControl5.TabIndex = 2;
@@ -115,7 +115,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(443, 42);
+            this.labelControl1.Location = new System.Drawing.Point(545, 39);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 2;
@@ -123,7 +123,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(257, 40);
+            this.labelControl3.Location = new System.Drawing.Point(359, 36);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(32, 13);
             this.labelControl3.TabIndex = 2;
@@ -131,53 +131,68 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(120, 89);
+            this.labelControl2.Location = new System.Drawing.Point(5, 87);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(28, 13);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Adres";
             // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(8, 37);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(31, 13);
+            this.labelControl6.TabIndex = 2;
+            this.labelControl6.Text = "Ünvan";
+            // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(101, 41);
+            this.labelControl7.Location = new System.Drawing.Point(203, 37);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(15, 13);
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "Adı";
             // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(8, 55);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(182, 21);
+            this.txtTitle.TabIndex = 1;
+            // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(101, 59);
+            this.txtFirstName.Location = new System.Drawing.Point(203, 55);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(150, 21);
             this.txtFirstName.TabIndex = 1;
             // 
             // txtDescreption
             // 
-            this.txtDescreption.Location = new System.Drawing.Point(581, 59);
+            this.txtDescreption.Location = new System.Drawing.Point(388, 107);
             this.txtDescreption.Name = "txtDescreption";
-            this.txtDescreption.Size = new System.Drawing.Size(207, 21);
+            this.txtDescreption.Size = new System.Drawing.Size(288, 21);
             this.txtDescreption.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(443, 59);
+            this.txtPhone.Location = new System.Drawing.Point(545, 56);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(131, 21);
             this.txtPhone.TabIndex = 1;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(257, 59);
+            this.txtLastName.Location = new System.Drawing.Point(359, 55);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(180, 21);
             this.txtLastName.TabIndex = 1;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(120, 106);
+            this.txtAddress.Location = new System.Drawing.Point(5, 107);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(556, 21);
+            this.txtAddress.Size = new System.Drawing.Size(377, 21);
             this.txtAddress.TabIndex = 1;
             // 
             // groupControl2
@@ -205,21 +220,6 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(2, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(93, 21);
-            this.textBox1.TabIndex = 1;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(2, 41);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(31, 13);
-            this.labelControl6.TabIndex = 2;
-            this.labelControl6.Text = "Ünvan";
-            // 
             // xucCardManufacturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,7 +228,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "xucCardManufacturer";
             this.Size = new System.Drawing.Size(805, 615);
-            this.Load += new System.EventHandler(this.xucCardStock_Load);
+            this.Load += new System.EventHandler(this.xucCardManufacturer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -261,6 +261,6 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtLastName;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTitle;
     }
 }

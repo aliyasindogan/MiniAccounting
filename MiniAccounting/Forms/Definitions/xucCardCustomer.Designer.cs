@@ -209,7 +209,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "xucCardCustomer";
             this.Size = new System.Drawing.Size(805, 615);
-            this.Load += new System.EventHandler(this.xucCardStock_Load);
+            this.Load += new System.EventHandler(this.xucCardCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

@@ -43,6 +43,8 @@ namespace MiniAccounting.Forms.Operations
                 TaxRateID = db.TaxRate.FirstOrDefault(x => x.TaxName == cmbTaxRate.SelectedText).Id,
                 StockCode = txtStockCode.Text,
                 StockName = txtStockName.Text,
+                CreatedDate = DateTime.Now,
+                CreatedUserID = 1
             };
             db.CardStock.Add(cardStock);
             db.SaveChanges();

@@ -142,6 +142,7 @@
     <Compile Include="Models\Concrete\MeasurementUnit.cs" />
     <Compile Include="Models\Concrete\Context\MiniAccountingContext.cs" />
     <Compile Include="Models\ModelViews\CardCustomerView.cs" />
+    <Compile Include="Models\ModelViews\CardManufacturerView.cs" />
     <Compile Include="Models\ModelViews\CardStockView.cs" />
     <Compile Include="Models\Concrete\TaxRate.cs" />
     <Compile Include="Models\Concrete\User.cs" />
