@@ -81,7 +81,7 @@
             // 
             // cmbCity
             // 
-            this.cmbCity.Location = new System.Drawing.Point(682, 56);
+            this.cmbCity.Location = new System.Drawing.Point(682, 55);
             this.cmbCity.Name = "cmbCity";
             this.cmbCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -98,7 +98,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(682, 105);
+            this.btnSave.Location = new System.Drawing.Point(682, 106);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 23);
             this.btnSave.TabIndex = 3;
@@ -107,7 +107,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(388, 89);
+            this.labelControl5.Location = new System.Drawing.Point(359, 88);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(41, 13);
             this.labelControl5.TabIndex = 2;
@@ -123,7 +123,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(359, 36);
+            this.labelControl3.Location = new System.Drawing.Point(389, 39);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(32, 13);
             this.labelControl3.TabIndex = 2;
@@ -147,7 +147,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(203, 37);
+            this.labelControl7.Location = new System.Drawing.Point(263, 39);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(15, 13);
             this.labelControl7.TabIndex = 2;
@@ -157,42 +157,42 @@
             // 
             this.txtTitle.Location = new System.Drawing.Point(8, 55);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(182, 21);
+            this.txtTitle.Size = new System.Drawing.Size(249, 21);
             this.txtTitle.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(203, 55);
+            this.txtFirstName.Location = new System.Drawing.Point(263, 55);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(150, 21);
+            this.txtFirstName.Size = new System.Drawing.Size(120, 21);
             this.txtFirstName.TabIndex = 1;
             // 
             // txtDescreption
             // 
-            this.txtDescreption.Location = new System.Drawing.Point(388, 107);
+            this.txtDescreption.Location = new System.Drawing.Point(359, 107);
             this.txtDescreption.Name = "txtDescreption";
-            this.txtDescreption.Size = new System.Drawing.Size(288, 21);
+            this.txtDescreption.Size = new System.Drawing.Size(317, 21);
             this.txtDescreption.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(545, 56);
+            this.txtPhone.Location = new System.Drawing.Point(545, 55);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(131, 21);
             this.txtPhone.TabIndex = 1;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(359, 55);
+            this.txtLastName.Location = new System.Drawing.Point(389, 55);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(180, 21);
+            this.txtLastName.Size = new System.Drawing.Size(150, 21);
             this.txtLastName.TabIndex = 1;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(5, 107);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(377, 21);
+            this.txtAddress.Size = new System.Drawing.Size(348, 21);
             this.txtAddress.TabIndex = 1;
             // 
             // groupControl2

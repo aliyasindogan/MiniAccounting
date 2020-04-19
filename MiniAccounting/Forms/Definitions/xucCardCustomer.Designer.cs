@@ -77,16 +77,16 @@
             // 
             // cmbCity
             // 
-            this.cmbCity.Location = new System.Drawing.Point(8, 106);
+            this.cmbCity.Location = new System.Drawing.Point(8, 101);
             this.cmbCity.Name = "cmbCity";
             this.cmbCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbCity.Size = new System.Drawing.Size(106, 20);
+            this.cmbCity.Size = new System.Drawing.Size(150, 20);
             this.cmbCity.TabIndex = 4;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(8, 89);
+            this.labelControl4.Location = new System.Drawing.Point(8, 84);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(24, 13);
             this.labelControl4.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(682, 105);
+            this.btnSave.Location = new System.Drawing.Point(682, 100);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 23);
             this.btnSave.TabIndex = 3;
@@ -103,7 +103,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(487, 42);
+            this.labelControl5.Location = new System.Drawing.Point(487, 36);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(41, 13);
             this.labelControl5.TabIndex = 2;
@@ -111,7 +111,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(350, 42);
+            this.labelControl1.Location = new System.Drawing.Point(350, 36);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(164, 40);
+            this.labelControl3.Location = new System.Drawing.Point(164, 36);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(32, 13);
             this.labelControl3.TabIndex = 2;
@@ -127,7 +127,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(120, 89);
+            this.labelControl2.Location = new System.Drawing.Point(164, 84);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(28, 13);
             this.labelControl2.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(8, 41);
+            this.labelControl7.Location = new System.Drawing.Point(8, 36);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(15, 13);
             this.labelControl7.TabIndex = 2;
@@ -143,37 +143,37 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(8, 59);
+            this.txtFirstName.Location = new System.Drawing.Point(8, 54);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(150, 21);
             this.txtFirstName.TabIndex = 1;
             // 
             // txtDescreption
             // 
-            this.txtDescreption.Location = new System.Drawing.Point(487, 59);
+            this.txtDescreption.Location = new System.Drawing.Point(487, 54);
             this.txtDescreption.Name = "txtDescreption";
             this.txtDescreption.Size = new System.Drawing.Size(301, 21);
             this.txtDescreption.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(350, 59);
+            this.txtPhone.Location = new System.Drawing.Point(350, 54);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(131, 21);
             this.txtPhone.TabIndex = 1;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(164, 59);
+            this.txtLastName.Location = new System.Drawing.Point(164, 54);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(180, 21);
             this.txtLastName.TabIndex = 1;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(120, 106);
+            this.txtAddress.Location = new System.Drawing.Point(164, 101);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(556, 21);
+            this.txtAddress.Size = new System.Drawing.Size(512, 21);
             this.txtAddress.TabIndex = 1;
             // 
             // groupControl2

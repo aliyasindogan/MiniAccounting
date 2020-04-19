@@ -11,7 +11,7 @@ namespace MiniAccounting.Models.Context
             Database.SetInitializer<MiniAccountingContext>(new DbInitializer());
         }
 
-        public virtual DbSet<Stock> CardStock { get; set; }
+        public virtual DbSet<Stock> Stock { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<CategoryType> CategoryType { get; set; }
         public virtual DbSet<MeasurementUnit> MeasurementUnit { get; set; }
