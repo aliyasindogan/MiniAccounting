@@ -128,7 +128,6 @@
     <Compile Include="Models\BaseEntities\Concrete\CreatedEntity.cs" />
     <Compile Include="Models\Concrete\Customer.cs" />
     <Compile Include="Models\BaseEntities\Abstract\ICreatedEntity.cs" />
-    <Compile Include="Models\BaseEntities\Abstract\IDisplay.cs" />
     <Compile Include="Models\BaseEntities\Abstract\IDisplayEntity.cs" />
     <Compile Include="Models\BaseEntities\Abstract\IModifiableEntity.cs" />
     <Compile Include="Models\Concrete\Manufacturer.cs" />
